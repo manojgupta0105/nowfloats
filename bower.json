@@ -1,0 +1,16 @@
+{
+  "name": "socialcop",
+  "homepage": "https://github.com/manojgupta0105/socialcop",
+  "authors": [
+    "manojgupta0105 <manojgupta@athletto.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.4",
+    "angular-resource": "^1.5.3",
+    "angular-bootstrap": "^1.3.2",
+    "angular-ui-router": "^0.2.18"
+  }
+}

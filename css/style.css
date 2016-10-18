@@ -1,0 +1,85 @@
+.home-page{
+	padding:20px;	
+}
+.task-section{
+	padding: 0 20px;
+}
+
+.task-container{
+	height:85vh;
+	position:relative;
+}
+.task-container-box{
+	overflow: auto;
+	height: 75vh;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+.task-wrapper{
+	background: white;
+	color: gray;
+	padding-top: 10px;
+	margin-bottom:10px;
+}
+.task-number h1{
+	font-size:86px;
+	text-align:center;
+}
+.task-content{
+	
+}
+.task-status{
+	text-transform:uppercase;
+}
+.task-open{
+	color:orange;
+}
+.task-complete{
+	color:green;
+}
+.task-complete-button{
+	-webkit-box-shadow: 0px -2px 15px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -2px 15px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px -2px 15px -5px rgba(0,0,0,0.75);
+	text-align:right;
+	cursor:pointer;
+}
+.add-task-button{
+	width:95%;
+	position:absolute;
+	bottom:0;
+	cursor:pointer;
+	text-align:center;
+	background:white;
+}
+.add-task-button p{
+	margin-bottom:0px;
+	font-size:26px;
+	padding:10px 0px;
+	font-weight:bold;
+}
+.task-comment-box{
+	height:85vh;
+	position:relative;
+}
+.task-comment-wrapper{
+	margin-left:30px;
+}
+.comment-section{
+	overflow: auto;
+	height: 75vh;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	background: white;
+	margin-bottom: 5px;
+	padding-top:10px;
+}
+.comment-text{
+	
+}
+.comment-time{
+	
+}
+.clearSpace{
+	margin-bottom:10px;
+}

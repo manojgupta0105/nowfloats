@@ -1,0 +1,49 @@
+<div class="home-page container" style="height:89vh;background:cyan;">
+	<div class="row task-section" ng-if="currentTask.length == 0">
+		<div class="col-md-12" style="height:100%;">
+			<div style="display:table;height:100%;width:100%;">
+				<div style="display:table-cell; vertical-align:middle;text-align:center;height:100%;">
+					<button class="btn btn-default btn-lg" ng-click="addTask()">ADD TASKS</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row task-section" ng-if="currentTask.length > 0">
+		<div class="col-md-6 task-container">
+			<div class="row task-container-box">
+				<div class="col-md-12 task-wrapper" ng-repeat="task in currentTask track by $index">
+					<div class="row">
+						<div class="col-md-2 task-number" ng-click="selectTask(task)"><h1>{{$index+1}}</h1></div>
+						<div class="col-md-10 task-content" ng-click="selectTask(task)">
+							<p class="task-status" ng-class="{'task-open': task.status == 'open', 'task-complete': task.status == 'completed'}">{{task.status}}</p>
+							<h3>{{task.title}}</h3>
+							<p>{{task.description}}</p>
+						</div>
+						<div class="col-md-12 task-complete-button" ng-if="task.status=='open'" ng-click="completeTask(task)">
+							<p>Mark As Complete</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="add-task-button" ng-click="addTask()">
+				<p>Add Task</p>
+			</div>
+		</div>
+		<div class="col-md-6 task-comment-box">
+			<div class="task-comment-wrapper" ng-if="isTaskSelected">
+				<div class="row comment-section">
+					<div class="col-md-12" ng-repeat="comment in selectedTask.comments track by $index">
+						<p class="comment-text">{{comment.text}}</p>
+						<p class="comment-time">{{comment.timestamp | date : 'MMM d, y h:mm:ss'}}</p>
+					</div>
+				</div>
+				<div style="position:absolute;bottom:0;width:90%;">
+					<div class="clearSpace"></div>
+					<input type="text" class="form-control" ng-model="comment.text" style="width:100%;height:55px;" placeholder="Add a Comment..." ng-enter="addComment(comment.text)"></input>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+	<div class="clearSpace"></div>
+</div>
