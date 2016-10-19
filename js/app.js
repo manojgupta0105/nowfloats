@@ -32,7 +32,6 @@ var myApp = angular.module('ngApp', ['ngRoute','ui.router','ngResource','ui.boot
 		
 		
 		$scope.addTask = function(){
-			console.log("Test");
 			var modalInstance = $uibModal.open({
 			  animation: true,
 			  templateUrl: 'views/add-task-dialog.html',
@@ -41,7 +40,6 @@ var myApp = angular.module('ngApp', ['ngRoute','ui.router','ngResource','ui.boot
 			});
 
 			modalInstance.result.then(function (taskData) {
-			  console.log("TAsk Data "+JSON.stringify(taskData));
 			  $scope.currentTask.push(taskData);
 			  SessionService.set("taskList",$scope.currentTask);
 			}, function () {
@@ -51,6 +49,7 @@ var myApp = angular.module('ngApp', ['ngRoute','ui.router','ngResource','ui.boot
 		  
 		$scope.completeTask = function(task){
 			task.status="complete";
+			SessionService.set("taskList",$scope.currentTask);
 		}
 		
 		$scope.selectTask = function(task){
